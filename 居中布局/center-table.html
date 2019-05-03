@@ -7,13 +7,9 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Document</title>
   <style>
+    /* 基础样式 */
     .parent {
       background-color: #666;
-
-      display: table-cell;
-      text-align: center;
-            vertical-align:middle;
-
       width: 600px;
       height: 400px;
     }
@@ -23,9 +19,18 @@
       color: #fff;
       line-height: 200px;
       text-align: center;
-
       width: 300px;
       height: 200px;
+    }
+
+    /* 布局样式 */
+    .parent {
+      display: table-cell;
+      text-align: center;
+      vertical-align:middle;
+    }
+
+    .child {
       display: inline-block;
       vertical-align: middle;
     }
