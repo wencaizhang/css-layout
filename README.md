@@ -2,6 +2,19 @@
 
 ## 居中布局
 
++ [inline-block](./居中布局/center-inline-block.html)
++ [position](./居中布局/center-position.html)
++ [flex](./居中布局/center-flex.html)
++ [table](./居中布局/center-table.html)
+
+HTML 结构如下：
+
+```html
+<div class="parent">
+  <div class="child"></div>
+</div>
+```
+
 ### inline-block
 
 ```css
