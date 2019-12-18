@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>三列布局</title>
+  <style>
+    * {
+      padding: 0;
+      margin: 0;
+    }
+
+    .layout {
+      margin-top: 50px;
+    }
+
+    .layout article div {
+      min-height: 100px;
+    }
+
+    .layout .left {
+      background-color: lightblue;
+    }
+
+    .layout .right {
+      background-color: lightgreen;
+    }
+
+    .layout .center {
+      text-align: center;
+      color: #333;
+      background-color: lightcoral;
+    }
+  </style>
+</head>
+
+<body>
+  <!-- 浮动解决方案 -->
+  <style>
+    .layout.float .left {
+      float: left;
+      width: 300px;
+      background-color: lightblue;
+    }
+
+    .layout.float .right {
+      float: right;
+      width: 300px;
+      background-color: lightgreen;
+    }
+
+    .layout.float .center {
+      text-align: center;
+      background-color: lightcoral;
+    }
+  </style>
+  <section class="layout float">
+    <article class="left-right-center">
+      <div class="left"></div>
+      <div class="right"></div>
+      <div class="center">
+        <h1>三栏布局浮动解决方案</h1>
+        <p>1. 这是三栏布局中间部分</p>
+        <p>2. 这是三栏布局中间部分</p>
+      </div>
+    </article>
+  </section>
+
+
+  <!-- 绝对定位 -->
+  <style>
+    .layout.absolute {
+      position: relative;
+    }
+
+    .layout.absolute .left,
+    .layout.absolute .right {
+      position: absolute;
+      top: 0;
+      width: 300px;
+    }
+
+    .layout.absolute .left {
+      left: 0;
+      background-color: lightblue;
+    }
+
+    .layout.absolute .right {
+      right: 0;
+      background-color: lightgreen;
+    }
+
+    .layout.absolute .center {
+      text-align: center;
+      background-color: lightcoral;
+    }
+
+    /* 两侧分别留下 300px 空间 */
+    /* 1 padding*/
+    /* .layout.absolute { 
+      padding: 0 300px;
+    } */
+    /* 2 margin */
+    /* .layout.absolute .center {
+      margin: 0 300px;
+    } */
+    /* 3 position */
+    .layout.absolute .center {
+      position: absolute;
+      left: 300px;
+      right: 300px;
+    }
+
+    /*  */
+  </style>
+  <section class="layout absolute">
+    <article class="left-center-right">
+      <div class="left"></div>
+      <div class="center">
+        <h1>三栏布局绝对定位解决方案</h1>
+        <p>1. 这是三栏布局中间部分</p>
+        <p>2. 这是三栏布局中间部分</p>
+      </div>
+      <div class="right"></div>
+    </article>
+  </section>
+
+  <!-- table 解决方案 -->
+  <style>
+    /* main styles */
+    .layout.table {
+      margin-top: 200px;
+    }
+
+    .layout.table .left-center-right {
+      width: 100%;
+      min-height: 100px;
+      display: table;
+    }
+
+    .layout.table .left-center-right>div {
+      display: table-cell;
+    }
+
+    .layout.table .left {
+      width: 300px;
+    }
+
+    .layout.table .right {
+      width: 300px;
+    }
+  </style>
+  <section class="layout table">
+    <article class="left-center-right">
+      <div class="left"></div>
+      <div class="center">
+        <h1>三栏布局 table 解决方案</h1>
+        <p>1. 这是三栏布局中间部分</p>
+        <p>2. 这是三栏布局中间部分</p>
+      </div>
+      <div class="right"></div>
+    </article>
+  </section>
+
+
+  <!-- flexbox 解决方案 -->
+  <style>
+    /* main styles */
+    .layout.flexbox .left-center-right {
+      display: flex;
+    }
+
+    .layout.flexbox .left {
+      width: 300px;
+    }
+
+    .layout.flexbox .right {
+      width: 300px;
+    }
+
+    .layout.flexbox .center {
+      flex: 1;
+    }
+  </style>
+  <section class="layout flexbox">
+    <article class="left-center-right">
+      <div class="left"></div>
+      <div class="center">
+        <h1>三栏布局 flexbox 解决方案</h1>
+        <p>1. 这是三栏布局中间部分</p>
+        <p>2. 这是三栏布局中间部分</p>
+      </div>
+      <div class="right"></div>
+    </article>
+  </section>
+
+
+  <!-- grid -->
+  <style>
+    /* main styles */
+    .layout.grid .left-center-right {
+      display: grid;
+      width: 100%;
+      grid-template-rows: 100px;
+      grid-template-columns: 300px auto 300px;
+    }
+  </style>
+  <section class="layout grid">
+    <article class="left-center-right">
+      <div class="left"></div>
+      <div class="center">
+        <h1>三栏布局 grid 解决方案</h1>
+        <p>1. 这是三栏布局中间部分</p>
+        <p>2. 这是三栏布局中间部分</p>
+      </div>
+      <div class="right"></div>
+    </article>
+  </section>
+</body>
+
+</html>

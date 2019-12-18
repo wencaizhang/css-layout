@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>三列布局</title>
+  <style>
+    * {
+      padding: 0;
+      margin: 0;
+    }
+
+    .layout {
+      margin-top: 50px;
+    }
+
+    .layout article div {
+      min-height: 100px;
+    }
+
+    .layout .left {
+      background-color: lightblue;
+    }
+
+    .layout .right {
+      background-color: lightgreen;
+    }
+
+    .layout .center {
+      text-align: center;
+      background-color: lightcoral;
+    }
+  </style>
+</head>
+
+<body>
+  <!-- 绝对定位 -->
+  <style>
+    .layout.absolute {
+      position: relative;
+    }
+
+    .layout.absolute .left,
+    .layout.absolute .right {
+      position: absolute;
+      top: 0;
+      width: 300px;
+    }
+
+    .layout.absolute .left {
+      left: 0;
+      background-color: lightblue;
+    }
+
+    .layout.absolute .right {
+      right: 0;
+      background-color: lightgreen;
+    }
+
+    .layout.absolute .center {
+      text-align: center;
+      background-color: lightcoral;
+    }
+
+    /* 两侧分别留下 300px 空间 */
+    /* 1 padding*/
+    /* .layout.absolute { 
+      padding: 0 300px;
+    } */
+    /* 2 margin */
+    /* .layout.absolute .center {
+      margin: 0 300px;
+    } */
+    /* 3 position */
+    .layout.absolute .center {
+      position: absolute;
+      left: 300px;
+      right: 300px;
+    }
+
+    /*  */
+  </style>
+  <section class="layout absolute">
+    <article class="left-center-right">
+      <div class="left"></div>
+      <div class="center">
+        <h1>绝对定位解决方案</h1>
+        <p>1. 这是三栏布局中间部分</p>
+        <p>2. 这是三栏布局中间部分</p>
+      </div>
+      <div class="right"></div>
+    </article>
+  </section>
+</body>
+
+</html>

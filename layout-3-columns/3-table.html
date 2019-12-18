@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>三栏布局 table 解决方案</title>
+  <style>
+    /* basic styles */
+    * {
+      padding: 0;
+      margin: 0;
+    }
+
+    .layout {
+      margin-top: 50px;
+    }
+
+    .layout .left {
+      background-color: lightblue;
+    }
+
+    .layout .right {
+      background-color: lightgreen;
+    }
+
+    .layout .center {
+      text-align: center;
+      background-color: lightcoral;
+    }
+  </style>
+  <style>
+    /* main styles */
+    .layout.table .left-center-right {
+      width: 100%;
+      min-height: 100px;
+      display: table;
+    }
+
+    .layout.table .left-center-right>div {
+      display: table-cell;
+    }
+
+    .layout .left {
+      width: 300px;
+    }
+
+    .layout .right {
+      width: 300px;
+    }
+  </style>
+</head>
+
+<body>
+  <section class="layout table">
+    <article class="left-center-right">
+      <div class="left"></div>
+      <div class="center">
+        <h1>三栏布局 table 解决方案</h1>
+        <p>1. 这是三栏布局中间部分</p>
+        <p>2. 这是三栏布局中间部分</p>
+      </div>
+      <div class="right"></div>
+    </article>
+  </section>
+</body>
+
+</html>
