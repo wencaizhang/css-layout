@@ -5,68 +5,16 @@
 详情查看 [layout-3-columns](./layout-3-columns/)
 
 
++ [浮动](./layout-3-columns/1-float.html)
++ [定位](./layout-3-columns/2-2-position.html)
++ [table-cell](./layout-3-columns/3-3-table.html)
++ [flexbox](./layout-3-columns/4-flexbox.html)
++ [grid](./layout-3-columns/5-grid.html)
+
 
 ## 居中布局
 
-+ [inline-block](./居中布局/center-inline-block.html)
-+ [position](./居中布局/center-position.html)
-+ [flex](./居中布局/center-flex.html)
-+ [table](./居中布局/center-table.html)
-
-HTML 结构如下：
-
-```html
-<div class="parent">
-  <div class="child"></div>
-</div>
-```
-
-### inline-block
-
-```css
-.parent {
-  text-align: center;
-}
-.child {
-  display: inline-block;
-}
-```
-
-### flex
-
-```css
-.parent {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-```
-
-### position
-
-```css
-.parent {
-  position: relative;
-}
-.child {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-}
-```
-
-### table
-
-```css
-.parent {
-  display: table-cell;
-  text-align: center;
-  vertical-align:middle;
-}
-
-.child {
-  display: inline-block;
-  vertical-align: middle;
-}
-```
++ [inline-block](./layout-center/1-inline-block.html)
++ [position](./layout-center/2-position.html)
++ [flex](./layout-center/3-flex.html)
++ [table](./layout-center/4-table.html)
